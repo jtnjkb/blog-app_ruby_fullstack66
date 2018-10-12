@@ -7,8 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor = "let articulo of articulos">
+    {{articulo | json}}
+
+  </ion-card>
+  <ion-fab bottom-right>
+    <button ion-fab (click)="agregarArticulo"></button>
+
+  </ion-fab>
 </ion-content>
